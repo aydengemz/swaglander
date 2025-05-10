@@ -5,11 +5,17 @@ import Image from 'next/image'
 
 export default function Home() {
   const handleClick = () => {
-    if (typeof window !== 'undefined' && 'snaptr' in window) {
-      // @ts-expect-error — snaptr is injected by the <Script> in layout.tsx
-      snaptr('track','SIGN_UP')
-      setTimeout(() => window.location.href = 'https://glstrck.com/aff_c?offer_id=1897&aff_id=11848', 200)
-    }
+    const redirectUrl =
+      'https://glstrck.com/aff_c?offer_id=1897&aff_id=11848'
+
+    // 1) Fire the SIGN_UP event immediately
+    // @ts-expect-error — snaptr is injected via layout.tsx
+    window.snaptr('track', 'SIGN_UP')
+
+    // 2) After a brief pause, navigate away so the Pixel request can complete
+    setTimeout(() => {
+      window.location.href = redirectUrl
+    }, 200) // 200 ms is usually enough; bump up if you see misses
   }
 
   return (
