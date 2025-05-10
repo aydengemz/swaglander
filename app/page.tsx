@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
+import "./globals.css";
 
 export default function Home() {
   const handleClick = () => {
     if (typeof window !== "undefined" && "snaptr" in window) {
-      // @ts-ignore
+      // @ts-expect-error - Snap Pixel is loaded via script
       snaptr("track", "SIGN_UP");
     }
 
@@ -14,7 +15,7 @@ export default function Home() {
   return (
     <main>
       <Image
-        src="/swg2.png"
+        src="/swg3.png"
         alt="Swagbucks logo"
         width={64}
         height={64}
@@ -35,10 +36,6 @@ export default function Home() {
       <button className="cta" onClick={handleClick}>
         Start Earning Now →
       </button>
-
-      <p className="disclaimer">
-        This site contains affiliate links. We may receive a commission when you sign up.
-      </p>
     </main>
   );
 }

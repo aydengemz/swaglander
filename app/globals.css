@@ -14,6 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 0 1rem; /* Added horizontal padding for the body on all screen sizes, more noticeable on mobile */
 }
 
 main {
@@ -27,33 +28,35 @@ main {
 }
 
 main img {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 1rem;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0.5rem; /* Slightly increased bottom margin */
+  border-radius: 20%;    /* Makes the logo rounded */
 }
 
 h1 {
   font-size: 1.75rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem; /* Slightly increased bottom margin */
   color: #111827;
 }
 
 p.description {
   font-size: 0.95rem;
   color: #4b5563;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem; /* Slightly increased bottom margin */
 }
 
 ul.bullets {
   text-align: left;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;  /* Increased bottom margin */
   font-size: 0.95rem;
   color: #374151;
+  padding-left: 1.25rem; /* Added some padding to the left of bullets for better alignment */
 }
 
 ul.bullets li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem; /* Slightly increased bottom margin */
 }
 
 button.cta {
@@ -61,7 +64,7 @@ button.cta {
   background-color: #2563eb;
   color: white;
   font-weight: 500;
-  padding: 0.75rem;
+  padding: 0.85rem; /* Slightly increased padding */
   font-size: 1rem;
   border: none;
   border-radius: 0.75rem;
@@ -76,5 +79,24 @@ button.cta:hover {
 p.disclaimer {
   font-size: 0.75rem;
   color: #6b7280;
-  margin-top: 1.5rem;
+  margin-top: 1.75rem; /* Slightly increased top margin */
+}
+
+/* Media query for mobile devices to ensure padding on the sides of the card */
+@media (max-width: 480px) {
+  body {
+    padding: 0 1rem; /* Ensures there's always some space on the sides of the body */
+  }
+  main {
+    padding: 2rem 1.5rem; /* Adjusted padding for the card on smaller screens */
+  }
+  h1 {
+    font-size: 1.6rem; /* Slightly smaller h1 on mobile */
+  }
+  p.description {
+    font-size: 0.9rem;
+  }
+  ul.bullets {
+    font-size: 0.9rem;
+  }
 }
