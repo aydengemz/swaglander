@@ -1,12 +1,12 @@
-// app/page.tsx
 'use client'
 
+import React from 'react'
 import Image from 'next/image'
 
 export default function Home() {
   const handleClick = () => {
     if (typeof window !== 'undefined' && 'snaptr' in window) {
-      // @ts-expect-error — snaptr comes from the injected <Script>
+      // @ts-expect-error — snaptr is injected by the <Script> in layout.tsx
       window.snaptr('track', 'SIGN_UP')
     }
     window.location.href =

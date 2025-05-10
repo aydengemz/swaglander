@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
@@ -18,15 +17,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* 1. Load Snap Pixel library */}
+        {/* 1) Load Snap Pixel library BEFORE hydration */}
         <Script
           id="snap-pixel-lib"
           src="https://sc-static.net/scevent.min.js"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
 
-        {/* 2. Init Pixel & track PAGE_VIEW */}
-        <Script id="snap-pixel-init" strategy="afterInteractive">
+        {/* 2) Init your Pixel + fire PAGE_VIEW BEFORE hydration */}
+        <Script id="snap-pixel-init" strategy="beforeInteractive">
           {`
             window.snaptr = window.snaptr || function() {
               (window.snaptr.q = window.snaptr.q || []).push(arguments);
