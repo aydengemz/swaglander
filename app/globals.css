@@ -61,7 +61,7 @@ ul.bullets li {
 
 button.cta {
   width: 100%;
-  background-color: #2563eb;
+  background-color: #67B6D4;
   color: white;
   font-weight: 500;
   padding: 0.85rem; /* Slightly increased padding */
@@ -73,7 +73,7 @@ button.cta {
 }
 
 button.cta:hover {
-  background-color: #1d4ed8;
+  background-color: #5f83e4;
 }
 
 p.disclaimer {
