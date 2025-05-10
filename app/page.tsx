@@ -7,10 +7,9 @@ export default function Home() {
   const handleClick = () => {
     if (typeof window !== 'undefined' && 'snaptr' in window) {
       // @ts-expect-error — snaptr is injected by the <Script> in layout.tsx
-      window.snaptr('track', 'SIGN_UP')
+      snaptr('track','SIGN_UP')
+      setTimeout(() => window.location.href = 'https://glstrck.com/aff_c?offer_id=1897&aff_id=11848', 200)
     }
-    window.location.href =
-      'https://glstrck.com/aff_c?offer_id=1897&aff_id=11848'
   }
 
   return (
