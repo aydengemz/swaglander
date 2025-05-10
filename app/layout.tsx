@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               r.src=n;var u=t.getElementsByTagName(s)[0];
               u.parentNode.insertBefore(r,u);})(window,document,
               'https://sc-static.net/scevent.min.js');
-              snaptr('init', '9e96b458-a285-490d-9d76-eb701b8c9078');
+              snaptr('init', '6117fbcb-85ff-49d2-87d3-d9dab789dfe8');
               snaptr('track', 'PAGE_VIEW');
           `}
         </Script>
