@@ -3,7 +3,7 @@ import Script from 'next/script'
 import './globals.css'
 
 const GTM_ID = 'GTM-PCHZKVHX'
-const PIXEL_ID = '4b9cfc9c-d70e-4ded-89fe-51f54a476254'
+const PIXEL_ID = '6117fbcb-85ff-49d2-87d3-d9dab789dfe8'
 
 export const metadata: Metadata = {
   title: 'Earn Gift Cards with Swagbucks',
