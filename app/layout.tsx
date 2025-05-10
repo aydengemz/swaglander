@@ -1,46 +1,42 @@
 // app/layout.tsx
-import type { Metadata } from "next";
-import Script from "next/script";
+import type { Metadata } from 'next'
+import Script from 'next/script'
+import './globals.css'
 
-const PIXEL_ID = "9e96b458-a285-490d-9d76-eb701b8c9078";
+const PIXEL_ID = '4b9cfc9c-d70e-4ded-89fe-51f54a476254'
 
 export const metadata: Metadata = {
-  title: "Earn Gift Cards with Swagbucks",
-  description: "Start earning rewards today.",
-};
+  title: 'Earn Gift Cards with Swagbucks',
+  description: 'Start earning rewards today.',
+}
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
       <head>
-        {/* …other tags… */}
-
-        {/* 1) Load Snap Pixel library */}
+        {/* 1. Load Snap Pixel library */}
         <Script
+          id="snap-pixel-lib"
           src="https://sc-static.net/scevent.min.js"
           strategy="afterInteractive"
-          id="snap-pixel-lib"
         />
 
-        {/* 2) Init your Pixel + fire PAGE_VIEW */}
+        {/* 2. Init Pixel & track PAGE_VIEW */}
         <Script id="snap-pixel-init" strategy="afterInteractive">
           {`
             window.snaptr = window.snaptr || function() {
-              (window.snaptr.q = window.snaptr.q || []).push(arguments)
+              (window.snaptr.q = window.snaptr.q || []).push(arguments);
             };
-            snaptr('init', '${PIXEL_ID}', {
-              // If you have the user’s email at build time, interpolate here.
-              // Otherwise omit or pass empty string.
-              'user_email': '' 
-            });
+            snaptr('init', '${PIXEL_ID}', {});
             snaptr('track', 'PAGE_VIEW');
           `}
         </Script>
       </head>
-      <body>
-        {/* … */}
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
-  );
+  )
 }
