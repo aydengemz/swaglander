@@ -23,25 +23,16 @@ export default function Home() {
       <Image
         src="/swg3.png"
         alt="Swagbucks logo"
-        width={64}
-        height={64}
+        width={128}
+        height={128}
         className="mx-auto"
       />
 
-      <h1 className="mt-4 text-2xl font-semibold">
-        Earn Online
-      </h1>
-
-      <p className="description mt-2">
-        Sign up to earn points by answering surveys, watching videos, and
-        shopping online.
-      </p>
-
       <button
         onClick={handleClick}
-        className="cta inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700 transition"
+        className="cta inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded shadow-lg hover:bg-blue-700 transition"
       >
-        Start Earning Now →
+        Click Here to Download →
       </button>
     </main>
   )

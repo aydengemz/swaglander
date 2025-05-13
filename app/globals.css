@@ -19,18 +19,18 @@ body {
 
 main {
   background-color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
   padding: 2.5rem;
   border-radius: 1.5rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
   max-width: 420px;
   width: 100%;
   text-align: center;
 }
 
 main img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 0.5rem; /* Slightly increased bottom margin */
+  width: 160px; /* Increased width */
+  height: 160px; /* Increased height */
+  margin-bottom: 3.5rem; /* Slightly increased bottom margin */
   border-radius: 20%;    /* Makes the logo rounded */
 }
 
@@ -70,6 +70,7 @@ button.cta {
   border-radius: 0.75rem;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
 }
 
 button.cta:hover {
