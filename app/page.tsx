@@ -29,19 +29,13 @@ export default function Home() {
       />
 
       <h1 className="mt-4 text-2xl font-semibold">
-        Earn Gift Cards Online
+        Earn Online
       </h1>
 
       <p className="description mt-2">
         Sign up to earn points by answering surveys, watching videos, and
         shopping online.
       </p>
-
-      <ul className="bullets my-4 text-left list-disc list-inside">
-        <li>✅ Join for free in under 60 seconds</li>
-        <li>✅ Redeem points for Amazon, PayPal, and more</li>
-        <li>✅ Over $900 million paid to members</li>
-      </ul>
 
       <button
         onClick={handleClick}
