@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <main className="max-w-xl mx-auto p-6 text-center">
       <Image
-        src="/swg3.png"
+        src="/d1.png"
         alt="Swagbucks logo"
         width={128}
         height={128}
